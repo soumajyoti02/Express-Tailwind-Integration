@@ -29,7 +29,9 @@ Step 5: Keep the index.html and index.js outside of the SRC directory
 Step 6: Add this line into index.js to give access to the src folder
 ```
 app.use(express.static("src"))
+```
 or
+```
 app.use(express.static(path.join(__dirname, 'src')));
 ```
 
