@@ -32,10 +32,10 @@ const path = require('path');
 app.use('/src', express.static(path.join(__dirname, 'src')))
 ```
 
-Step 7: Add this code into package.json
+Step 7: Install ```npm i concurrently``` & Add this code into package.json
 ```
 "scripts": {
-    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch && nodemon index.js"
+    "start": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"nodemon index.js\""
   },
 ```
 
